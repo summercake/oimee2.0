@@ -9,7 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="/css/app.css">
         <!-- Styles -->
         <style>
             html, body {
@@ -90,6 +90,7 @@
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
+                <span class="badge badge-pill badge-warning">Be careful!</span>
         </div>
     </body>
 </html>

@@ -1,14 +1,63 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Variables
 @import "variables";
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~font-awesome/scss/font-awesome';
 
-.navbar-laravel {
-  background-color: #fff;
+.navbar-laravel{
+  background-color: #FFFFFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+/* Components Initialization */
+$main-red: #ED6F6F;
+$hover-red: #D67C7C;
+$main-white: #FFFFFF;
+$main-yellow:#FCD514;
+.btn{
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  height: 2.2rem;
+  width: 6rem;
+  color: $main-white;
+  font-weight: bold;
+
+}
+.btn:hover{
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  height: 2.2rem;
+  width: 6rem;
+  color: $main-white;
+  cursor: pointer;
+}
+.btn-main{
+  background: $main-red;
+  box-shadow: 1px 1px 1px #999999;
+  color: $main-white;
+  border: 1px solid $main-red;
+}
+.btn-main:hover{
+  box-shadow: 2px 5px 5px #999999;
+}
+.btn-main-yellow{
+  background: $main-yellow;
+  box-shadow: 1px 1px 1px #999999;
+  color: $main-white;
+  border: 1px solid $main-yellow;
+}
+.btn-main-yellow:hover{
+  box-shadow: 2px 5px 5px #999999;
+}
+
+/* nav */
+.nav-section{
+  border-bottom: 1px solid $main-red;
+
+}
+
