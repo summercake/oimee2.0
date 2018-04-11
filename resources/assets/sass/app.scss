@@ -5,7 +5,6 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 @import '~font-awesome/scss/font-awesome';
-
 .navbar-laravel{
   background-color: #FFFFFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -14,50 +13,223 @@
 $main-red: #ED6F6F;
 $hover-red: #D67C7C;
 $main-white: #FFFFFF;
-$main-yellow:#FCD514;
-.btn{
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  height: 2.2rem;
-  width: 6rem;
-  color: $main-white;
-  font-weight: bold;
+$font-light: #FFFFFF;
+$main-yellow: #FCD514;
+$font-dark: #6C757D;
+$shadow: #AAAAAA;
+$b-shadow: 1px 1px 5px $shadow;
+$b-shadow-hover: 3px 3px 5px $shadow;
 
+$border-light: 1px solid $shadow;
+$border-red: 2px solid $main-red;
+$border-red-hover: 2px solid $main-yellow;
+
+body{
+  color: $font-dark;
+  font-family: "Microsoft YaHei", "sans-serif", "Arial";
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus,
+  textarea{
+    outline: none;
+    box-shadow: none !important;
+    border: 1px solid #CCCCCC !important;
+  }
+  a{
+    color: $font-dark;
+  }
+  a:hover{
+    text-decoration: none;
+    color: $font-dark;
+  }
 }
-.btn:hover{
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  height: 2.2rem;
-  width: 6rem;
-  color: $main-white;
-  cursor: pointer;
+.tag-a{
+  color: $main-red;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.tag-a:hover{
+  color: $main-red;
+  text-decoration: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: 1px solid $main-red;
 }
 .btn-main{
-  background: $main-red;
-  box-shadow: 1px 1px 1px #999999;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  height: 2.2rem;
+  min-width: 6rem;
+  line-height: 1.4rem;
   color: $main-white;
+  background: $main-red;
+  box-shadow: $b-shadow;
   border: 1px solid $main-red;
 }
 .btn-main:hover{
-  box-shadow: 2px 5px 5px #999999;
-}
-.btn-main-yellow{
-  background: $main-yellow;
-  box-shadow: 1px 1px 1px #999999;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  height: 2.2rem;
+  line-height: 1.4rem;
+  min-width: 6rem;
   color: $main-white;
-  border: 1px solid $main-yellow;
+  cursor: pointer;
+  box-shadow: $b-shadow-hover;
 }
-.btn-main-yellow:hover{
-  box-shadow: 2px 5px 5px #999999;
+.btn-main-outline{
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1.4rem;
+  height: 2.2rem;
+  width: 6rem;
+  color: $main-red;
+  border: 1.5px solid $main-red;
 }
-
+.btn-main-outline:hover{
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1.4rem;
+  height: 2.2rem;
+  width: 6rem;
+  color: $main-white;
+  border: 2px solid $main-red;
+  box-shadow: $b-shadow-hover;
+  background: $main-red;
+}
+.alert-section{
+  box-shadow: 1px 1px 1px $shadow;
+}
 /* nav */
 .nav-section{
-  border-bottom: 1px solid $main-red;
-
+  border-bottom: 2px solid $main-red;
+  .a-icon{
+    color: $main-red;
+    font-size: 14px;
+  }
+  .a-icon:hover{
+    color: $main-red;
+    font-size: 14px;
+  }
+  .nav-search{
+    margin: auto 0 auto 0;
+  }
+  .form-control-sm{
+    border: 1px solid #CED4DA;
+  }
+  .btn-search{
+    color: $main-white;
+    font-weight: bold;
+    background: $main-red;
+    border: 1px solid $main-red;
+  }
+  .search-zip .search-item{
+    vertical-align: middle;
+  }
+  .search-zip:focus{
+    border: none;
+  }
 }
+/* card */
+.card-vertical{
+  padding:1px;
+  box-shadow: $b-shadow;
+  overflow: hidden;
+  .card-img-size{
+  }
+  .card-link{
+    color: $main-red;
+    vertical-align: middle;
+    margin: 0.5rem;
+  }
+  .card-link:hover{
+    color: $main-red;
+    vertical-align: middle
+  }
+  .card-row-btn{
+    margin:10px auto 0 auto;
+  }
+  h5{
+    margin:10px auto;
+  }
+  .badge-hot{
+    position: relative;
+    width: 40%;
+    transform: rotate(0.88turn);
+    float:left;
+    top:26px;
+    right:34px;
+  }
+}
+.card-vertical:hover{
+  padding:0;
+  cursor: pointer;
+  border:$border-red;
+  box-shadow: $b-shadow;
+  .btn-main:hover{
+    background: $main-yellow;
+    color: $main-white;
+    border: $border-red-hover
+  }
 
+  .card-row-btn{
+    margin:10px auto 0 auto;
+  }
+  h5{
+    margin:10px auto;
+  }
+}
+.card-link{
+  color: $main-red;
+  vertical-align: middle;
+  margin: 0.5rem;
+}
+.card-link:hover{
+  color: $hover-red;
+  vertical-align: middle
+}
+.card-horizon{
+  border:$border-red;
+  margin: 0 auto;
+  .card-left .card-right{
+    height: auto;
+  }
+  .card-left{
+    .card-left-img{
+      margin: 5px;
+    }
+    .card-right-footer{
+      margin:5px;
+    }
+  }
+}
+.card-right-footer-new{
+  background: $main-red;
+  color: $font-light;
+  .card-link{
+    color: $font-light;
+    vertical-align: middle;
+    margin: 0.5rem;
+  }
+}
+.card-right-new{
+  padding: 10px;
+}
