@@ -12899,6 +12899,19 @@ body .nav-tabs .nav-link {
   border: 1px solid transparent;
 }
 
+body .pagination > li > a,
+body .pagination > li > span,
+body .pagination > li > a.active,
+body .pagination > li > span.active,
+body .pagination > li > a.focus,
+body .pagination > li > span.focus {
+  outline: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none;
+  border-radius: 0;
+}
+
 .tag-a {
   color: #ED6F6F;
   padding-top: 1px;
@@ -13100,12 +13113,12 @@ body .nav-tabs .nav-link {
   white-space: nowrap;
   vertical-align: middle;
   line-height: 1.2rem;
-  height: 2.2rem;
+  height: 1.4rem;
   width: 6rem;
   color: #ED6F6F;
-  border: 2px solid #ED6F6F;
+  border: 1px solid #ED6F6F;
   background: transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
 }
 
 .btn-main-outline-round-light:hover {
@@ -13114,14 +13127,14 @@ body .nav-tabs .nav-link {
   white-space: nowrap;
   vertical-align: middle;
   line-height: 1.2rem;
-  height: 2.2rem;
+  height: 1.4rem;
   width: 6rem;
   color: #FFFFFF;
-  border: 2px solid #ED6F6F;
+  border: 1px solid #ED6F6F;
   -webkit-box-shadow: 3px 3px 5px #AAAAAA;
           box-shadow: 3px 3px 5px #AAAAAA;
   background: #ED6F6F;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
 }
 
 /* btn drop down */
@@ -13726,5 +13739,86 @@ body .nav-tabs .nav-link {
 
 .nav-btn-section a {
   color: #FFFFFF;
+}
+
+.adv-top-section {
+  background: #FFFFFF;
+  border-left: 5px solid #ED6F6F;
+}
+
+.adv-top-section .adv-top-hot {
+  padding: 0 5px;
+  overflow: visible;
+}
+
+.adv-top-section .adv-top-hot .carousel-item {
+  overflow: visible;
+}
+
+.adv-top-section .adv-top-hot .row {
+  overflow: visible;
+}
+
+.adv-top-section .adv-top-hot .row .col-md-2 {
+  padding: 5px;
+}
+
+.adv-top-section .adv-top-hot .row .col-md-2 .card {
+  padding: 4px;
+  min-width: 100px;
+  border: 2px dashed #B3B3B3;
+  border-radius: 0.7rem;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.adv-top-section .adv-top-hot .row .col-md-2 .card img {
+  border-radius: 0.5rem;
+}
+
+.adv-top-section .adv-top-hot .row .col-md-2 .card .card-body {
+  font-size: 0.8rem;
+}
+
+.adv-top-section .adv-top-hot .row .col-md-2 .card .card-body .adv-card-price {
+  color: #ED6F6F;
+  margin-bottom: 2px;
+}
+
+.adv-top-section .adv-top-hot .row .col-md-2 .card .card-body .adv-card-detail {
+  margin: 0;
+  line-height: 1rem;
+}
+
+.adv-top-section .adv-top-hot .row .col-md-2 .card .adv-cut {
+  position: absolute;
+  bottom: -11px;
+  right: 8px;
+  color: #ED6F6F;
+  z-index: 999;
+  font-size: 20px;
+  -webkit-transform: rotate(0.5turn);
+          transform: rotate(0.5turn);
+}
+
+.adv-top-section .adv-top-like {
+  display: none;
+}
+
+.adv-top-section .pagination > li > a,
+.adv-top-section .pagination > li > span,
+.adv-top-section .pagination > li > a,
+.adv-top-section .pagination > li > span {
+  color: #ED6F6F;
+}
+
+.adv-top-section .adv-slide-arrow {
+  color: #ED6F6F;
+}
+
+.adv-top-section .page-link {
+  padding: 5px;
+  font-size: 1rem;
+  line-height: 1.2rem;
 }
 
