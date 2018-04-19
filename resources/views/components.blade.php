@@ -71,7 +71,7 @@
             <a href="#" class="btn btn-main-outline mx-2">社区</a>
             <a href="#" class="btn btn-main-round mx-2">社区</a>
             <a href="#" class="btn btn-main-outline-round mx-2">社区</a>
-            <a href="#" class="btn btn-main-round-light mx-2">社区</a>
+            <a href="#" class="btn btn-main-round-light mx-2">社区社区</a>
             <a href="#" class="btn btn-main-outline-round-light mx-2">社区</a>
         </div>
     </div>

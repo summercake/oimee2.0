@@ -78,7 +78,14 @@ body{
   .nav-tabs .nav-link{
     border: 1px solid transparent;
   }
-
+  .pagination > li > a, .pagination > li > span,
+  .pagination > li > a.active, .pagination > li > span.active,
+  .pagination > li > a.focus, .pagination > li > span.focus{
+    outline: none;
+    box-shadow: none !important;
+    border: none;
+    border-radius: 0;
+  }
 }
 .tag-a{
   color: $main-red;
@@ -230,28 +237,28 @@ body{
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  height: 2.2rem;
-  min-width: 6rem;
-  line-height: 1.2rem;
+  height: 1.8rem;
+  min-width: 5rem;
+  line-height: 0.9rem;
   color: $main-white;
   background: $main-red;
-  box-shadow: $b-shadow;
+  //box-shadow: $b-shadow;
   border: $border-red;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
 }
 .btn-main-round-light:hover{
   display: inline-block;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  height: 2.2rem;
-  min-width: 6rem;
-  line-height: 1.2rem;
+  height: 1.8rem;
+  min-width: 5rem;
+  line-height: 0.9rem;
   color: $font-light;
   background: $main-red;
   box-shadow: $b-shadow-hover;
   border: $border-red;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
 }
 .btn-main-outline-round-light{
   display: inline-block;
@@ -259,12 +266,12 @@ body{
   white-space: nowrap;
   vertical-align: middle;
   line-height: 1.2rem;
-  height: 2.2rem;
+  height: 1.4rem;
   width: 6rem;
   color: $main-red;
-  border: $border-red;
+  border: 1px solid $main-red;
   background: transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
 }
 .btn-main-outline-round-light:hover{
   display: inline-block;
@@ -272,13 +279,13 @@ body{
   white-space: nowrap;
   vertical-align: middle;
   line-height: 1.2rem;
-  height: 2.2rem;
+  height: 1.4rem;
   width: 6rem;
   color: $main-white;
-  border: $border-red;
+  border: 1px solid $main-red;
   box-shadow: $b-shadow-hover;
   background: $main-red;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
 }
 /* btn drop down */
 .btn-main-dropdown{
@@ -353,7 +360,9 @@ body{
 }
 /* nav */
 .nav-section{
-  border-bottom: 2px solid $main-red;
+  //border-bottom: 2px solid $main-red;
+  box-shadow: $b-shadow;
+  background: $main-white;
   .nav-logo{
   }
   .a-icon{
@@ -366,6 +375,15 @@ body{
   }
   .nav-search{
     margin: auto 0 auto 0;
+    .search-bar-dropdown{
+      background: $main-red;
+      color: $main-white;
+    }
+    .search-bar-dropdown:hover{
+      background: $main-red;
+      color: $main-white;
+    }
+
   }
   .form-control-sm{
     border: 1px solid #CED4DA;
@@ -387,18 +405,23 @@ body{
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: $main-red;
   z-index: 99;
   box-shadow: 1px -1px 3px $shadow;;
   .row{
-      padding: 25px 0;
+    padding: 15px 0;
     a{
-      color:$main-white;
+      color: $main-white;
     }
     a:hover{
-      color:$main-white;
+      color: $main-white;
     }
+  }
+}
+.nav-sm{
+  .nav-logo-sm{
+    width: 100px;
   }
 }
 /* card */
@@ -462,30 +485,26 @@ body{
   vertical-align: middle
 }
 .card-horizon{
-  border: $border-red;
   margin: 0 auto;
   .card-left .card-right{
     height: auto;
   }
   .card-left{
-    .card-left-img{
-    }
     .card-right-footer{
       margin: 5px;
     }
   }
 }
 .card-right-footer-new{
-  background: $main-red;
-  color: $font-light;
+  line-height: 35px;
   .card-link{
-    color: $font-light;
-    vertical-align: middle;
+    color: $main-red;
+    vertical-align: center;
     margin: 0.5rem;
   }
 }
 .card-right-new{
-  padding: 18px;
+  padding: 15px;
 }
 /* categories bar */
 .categories-section{
@@ -557,13 +576,18 @@ body{
     position: relative;
     display: block;
     .slide-long-img{
-      width: 1920px;  !*设置宽高是图片的 宽高*!
+      width: 1920px;
       height: 400px;
-      position:absolute;
-      left: 50%;              !*距离左边50% *!
-      margin-left: -960px;    !*让图片向左扯回 图片总宽的一半的距离*!
+      position: absolute;
+      left: 50%;
+      margin-left: -960px;
       display: block;
     }
+  }
+}*/
+/*.slide-long{
+  .slide-long-img{
+    height: 400px;
   }
 }*/
 /* categories bar  */
@@ -726,7 +750,7 @@ body{
 /* card-horizontal section */
 .card-horizontal-section{
   background: $main-white;
-  border-top: $border-red-adv;
+  border-top: $border-red;
   .card-main-header{
     h3{
       color: $main-red;
@@ -736,7 +760,8 @@ body{
     }
   }
   .card-horizon{
-    border: $border-gray;
+    border-left: $border-red;
+    box-shadow: $b-shadow;
     margin: 0 auto;
     background: $card-h-bg;
     .card-left .card-right{
@@ -751,4 +776,76 @@ body{
     }
   }
 }
-
+.right-adv-zone-detail{
+  border-top: $border-red;
+  background: $main-white;
+  height: 400px;
+}
+.nav-btn-section{
+  a{
+    color: $main-white;
+  }
+}
+.adv-top-section{
+  background: $main-white;
+  border-left: $border-red-adv;
+  .adv-top-hot{
+    padding: 0 5px;
+    overflow: visible;
+    .carousel-item{
+      overflow: visible;
+    }
+    .row{
+      overflow: visible;
+      .col-md-2{
+        padding: 5px;
+        .card{
+          padding: 4px;
+          min-width: 100px;
+          border: 2px dashed #B3B3B3;
+          border-radius: 0.7rem;
+          position: relative;
+          margin-bottom: 5px;
+          img{
+            border-radius: 0.5rem;
+          }
+          .card-body{
+            font-size: 0.8rem;
+            .adv-card-price{
+              color: $main-red;
+              margin-bottom: 2px;
+            }
+            .adv-card-detail{
+              margin: 0;
+              line-height: 1rem;
+            }
+          }
+          .adv-cut{
+            position: absolute;
+            bottom: -11px;
+            right: 8px;
+            color: $main-red;
+            z-index: 999;
+            font-size: 20px;
+            transform: rotate(0.5turn);
+          }
+        }
+      }
+    }
+  }
+  .adv-top-like{
+    display: none;
+  }
+  .pagination > li > a, .pagination > li > span,
+  .pagination > li > a, .pagination > li > span{
+    color: $main-red;
+  }
+  .adv-slide-arrow{
+    color: $main-red;
+  }
+  .page-link{
+    padding: 5px;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
