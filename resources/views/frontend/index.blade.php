@@ -1066,6 +1066,19 @@
         </div>
     </div>
 </div>
+<footer class="footer">
+    <div class="container text-center">
+        <p>
+            <a href="mailto:name@email.com">关于我们 |</a>
+            <a href="mailto:name@email.com">加入我们 |</a>
+            <a href="mailto:name@email.com">联系我们 |</a>
+            <a href="mailto:name@email.com">业务咨询 </a>
+        </p>
+        <p>
+            Oimee@2018 All Rights Reserved
+        </p>
+    </div>
+</footer>
 <script src="/js/app.js"></script>
 <script src="/js/font-awesome.js"></script>
 </body>

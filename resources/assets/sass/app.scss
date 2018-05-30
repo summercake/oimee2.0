@@ -27,8 +27,14 @@ $border-gray: 1px solid $main-section;
 $border-red: 2px solid $main-red;
 $border-red-adv: 5px solid $main-red;
 $border-red-hover: 2px solid $main-yellow;
+/* Sticky footer styles */
+html {
+  position: relative;
+  min-height: 100% ;
+}
 
 body{
+  margin-bottom: 60px;
   color: $font-dark;
   font-family: "Microsoft YaHei", "sans-serif", "Arial";
   input[type="text"]:focus,
@@ -849,4 +855,23 @@ body{
     line-height: 1.2rem;
   }
 
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100% ;
+  /* Set the fixed height of the footer here */
+  height: auto;
+  padding: 10px 0;
+  background-color: $main-red;
+  .container {
+    p {
+      margin: 5px 0;
+      color: $font-light;
+      a {
+        color: inherit;
+      }
+    }
+  }
 }

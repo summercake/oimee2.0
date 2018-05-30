@@ -12837,7 +12837,15 @@ a.text-dark:focus {
 
 /* Components Initialization */
 
+/* Sticky footer styles */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
+  margin-bottom: 60px;
   color: #6C757D;
   font-family: "Microsoft YaHei", "sans-serif", "Arial";
 }
@@ -13820,5 +13828,24 @@ body .pagination > li > span.focus {
   padding: 5px;
   font-size: 1rem;
   line-height: 1.2rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: auto;
+  padding: 10px 0;
+  background-color: #ED6F6F;
+}
+
+.footer .container p {
+  margin: 5px 0;
+  color: #FFFFFF;
+}
+
+.footer .container p a {
+  color: inherit;
 }
 

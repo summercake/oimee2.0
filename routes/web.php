@@ -20,4 +20,6 @@ Route::get('/index', function () {
 Route::get('/components', function () {
     return view('components');
 });
-
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
